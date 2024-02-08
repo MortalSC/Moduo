@@ -1011,11 +1011,152 @@ int epoll_event_callback(struct eventpoll *ep, int sockid, uint32_t event) {
 
 
 
+## Muduo 网络库的基本使用认识
+
+> 如果使用 epoll + 线程池 自主实现网络库，我们的思路就是封装。
+>
+> **好处：能够把网络 IO 的代码和业务代码区分开来！**
+
+### 下载
+
+
+
+### 编译注意点
+
+> 编译链接：附带指令
+
+~~~c++
+-lmuoduo_net
+-lmuduo_base
+-lphtread
+~~~
 
 
 
 
 
+
+
+
+
+### Muduo TcpServer 的使用
+
+> **用于编写服务器程序的**
+
+#### 服务器开发（头文件引入）
+
+~~~c++
+#include <muduo/net/TcpServer.h>
+#include <muduo/net/EventLoop.h>
+
+/*
+	TcpServer 没有默认构造函数，带有四个参数
+	第一个是：事件循环（EventLoop）
+	第二个是：ip+端口
+	第三个是：支持给 TcpServer 取名
+	第四个是：【可以不关注】协议选项
+*/
+~~~
+
+
+
+#### 开发步骤示例
+
+~~~c++
+// 1. 组合 TcpServer 对象
+// 2. 组合 EventLoop 事件循环对象【可以理解为 epoll】
+// 3. 明确 TcpServer 构造函数需要什么参数，再设计自己的组合封装类的构造函数
+// 4. 由于是网络库，因此网络相关操作不需要我们关注实现细节，我们会用就好！然后我们主要关注业务代码逻辑！
+// 5. 设置合适的服务端线程数量，muduo 会自动划分 IO 线程和 worker 线程
+// 即：给服务器注册用户理解的创建和断开回调
+// 即：给服务器注册用户读写事件回调
+#include <muduo/net/TcpServer.h>
+#include <muduo/net/EventLoop.h>
+#include <iostream>
+#include <functional>
+
+class ChatServer{
+public:
+    // 3. 明确 TcpServer 构造函数需要什么参数，再设计自己的组合封装类的构造函数
+    ChatServer(EventLoop* eloop,
+              const InetAddress& listenAddr，
+              const string& nameArg)
+			:_server(eloop,listenAddr, nameArg),_eloop(eloop){
+			// 给服务器注册用户连接的创建和断开回调
+			_server.setConnectCallback(std::bind(&ChatServer::onConnect, this, _1));
+			// 给服务器注册用户读写事件回调
+             _server.setMessageCallback(std::bind(&onMessage, this, _1, _2, _3));
+             // 设置服务器端的线程数量（一个监视：IO连接；三个执行：工作）
+             _server.setThreadNum(4);
+        }
+    
+    // 启动时间循环
+    void start(){
+        _server.start();
+    }
+    
+private:
+    // 专门处理用户连接的创建和断开
+    // epoll 监听 listenfd（新用户连接） 关联事件 accept
+    void onConnection(const TcpConnectionPtr&){
+        // 业务处理
+        // ...
+        // 假设要打印对端信息
+        if(conn->connected){
+            std::cout << conn->peerAddress().toIpPort() << "->" << 
+            conn->localAddress().toIpPort()  << " onInline"<< std::endl;
+        }else{
+            std::cout << conn->peerAddress().toIpPort() << "->" << 
+            conn->localAddress().toIpPort()  << " unOnInline"<< std::endl;
+            conn->send(buf);
+            conn->shutdown();	// 关闭连接【close(fd)】
+     		// _eloop->quit();	// 直接关闭整个服务
+        }
+    }
+    // 专门处理用户的读写事件
+    void onMessage(const TcpConnectPtr &conn, // 连接
+                   Buffer* buf, //数据缓冲区
+                   Timestamp time // 时间信息
+                  ){
+        // 业务处理
+        // ...
+        // 假设读取客户端发来的数据
+        string buf = buffer->retrieveAllAsString();	// 获取缓冲区的全部数据
+        std::cout << "recv data: " << buf << ", time: " << time.toString() << std::endl;
+    }
+private:
+    // 1. 组合 TcpServer 对象
+    muduo::net::TcpServer _server;
+    // 2. 组合 EventLoop 事件循环对象【可以理解为 epoll】
+    muduo::net::EventLoop* _eloop;
+};
+
+int main(){
+    EventLoop eloop;
+    InetAddress addr("127.0.0.1", 8000);
+    ChatServer server(&eloop, addr, "服务器名字");
+    server.start();	// 相等于把 listenfd 通过 epoll_ctl 添加到红黑树
+    eloop.loop();	// 相等于以阻塞方式调用epoll_wait，等待新用户的读写事件操作
+    return 0;
+}
+~~~
+
+
+
+
+
+
+
+### Muduo TcpClient 的认识
+
+> **用于编写客户端程序的**
+
+#### 客户端开发（头文件引入）
+
+~~~c++
+#include <muduo/net/TcpClient.h>
+#include <muduo/net/EventLoop.h>
+~~~
 
 
 
