@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Mortal/MuduoProject/Muduo/InetAddress.cc
+InetAddress.h
+/home/Mortal/MuduoProject/Muduo/InetAddress.h
+strings.h
+-
+string.h
+-
+
+/home/Mortal/MuduoProject/Muduo/InetAddress.h
+netinet/in.h
+-
+arpa/inet.h
+-
+string
+-
+

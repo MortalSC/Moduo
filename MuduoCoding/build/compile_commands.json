@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/Mortal/MuduoProject/Muduo/InetAddress.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/InetAddress.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Log.o -c /home/Mortal/MuduoProject/Muduo/Log.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Log.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/Mortal/MuduoProject/Muduo/Timestamp.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Timestamp.cc"
+}
+]
