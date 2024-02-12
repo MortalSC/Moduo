@@ -6,19 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/Mortal/MuduoProject/Muduo/InetAddress.cc
-InetAddress.h
-/home/Mortal/MuduoProject/Muduo/InetAddress.h
-strings.h
--
-string.h
+/home/Mortal/MuduoProject/Muduo/Channel.cc
+Channel.h
+/home/Mortal/MuduoProject/Muduo/Channel.h
+EventLoop.h
+/home/Mortal/MuduoProject/Muduo/EventLoop.h
+Log.h
+/home/Mortal/MuduoProject/Muduo/Log.h
+sys/epoll.h
 -
 
-/home/Mortal/MuduoProject/Muduo/InetAddress.h
-netinet/in.h
+/home/Mortal/MuduoProject/Muduo/Channel.h
+noncopyable.h
+/home/Mortal/MuduoProject/Muduo/noncopyable.h
+Timestamp.h
+/home/Mortal/MuduoProject/Muduo/Timestamp.h
+functional
 -
-arpa/inet.h
+memory
+-
+
+/home/Mortal/MuduoProject/Muduo/EventLoop.h
+
+/home/Mortal/MuduoProject/Muduo/Log.h
+string
+-
+noncopyable.h
+/home/Mortal/MuduoProject/Muduo/noncopyable.h
+Timestamp.h
+/home/Mortal/MuduoProject/Muduo/Timestamp.h
+
+/home/Mortal/MuduoProject/Muduo/Timestamp.h
+iostream
 -
 string
 -
+
+/home/Mortal/MuduoProject/Muduo/noncopyable.h
 

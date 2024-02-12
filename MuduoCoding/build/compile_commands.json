@@ -1,6 +1,21 @@
 [
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/Mortal/MuduoProject/Muduo/EventLoop.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/EventLoop.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/Mortal/MuduoProject/Muduo/Channel.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Channel.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpServer.o -c /home/Mortal/MuduoProject/Muduo/TcpServer.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/TcpServer.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/Mortal/MuduoProject/Muduo/InetAddress.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/InetAddress.cc"
 },
