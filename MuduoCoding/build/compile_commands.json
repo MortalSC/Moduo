@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/DefaultPoll.o -c /home/Mortal/MuduoProject/Muduo/DefaultPoll.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/DefaultPoll.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/Mortal/MuduoProject/Muduo/EventLoop.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/EventLoop.cc"
 },
@@ -21,6 +26,11 @@
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Poller.o -c /home/Mortal/MuduoProject/Muduo/Poller.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Poller.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Log.o -c /home/Mortal/MuduoProject/Muduo/Log.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/Log.cc"
 },
@@ -28,5 +38,10 @@
   "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/Mortal/MuduoProject/Muduo/Timestamp.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/Timestamp.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EpollPoller.o -c /home/Mortal/MuduoProject/Muduo/EpollPoller.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/EpollPoller.cc"
 }
 ]
