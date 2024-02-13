@@ -11,9 +11,10 @@
 
 namespace myMuduo
 {
+
+    class Channel;
     namespace NetWork
     {
-        class Channel;
         class EpollPoller : public Poller
         {
         public:
