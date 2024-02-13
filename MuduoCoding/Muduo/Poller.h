@@ -14,9 +14,10 @@
 
 namespace myMuduo
 {
+    class Channel;
+
     namespace NetWork
     {
-        class Channel;
         class EventLoop;
         class Poller : noncopyable
         {
