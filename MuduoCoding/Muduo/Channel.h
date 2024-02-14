@@ -100,7 +100,7 @@ namespace myMuduo
         static const int kReadEvent;  // 关心读事件
         static const int kWriteEvent; // 关心写事件
 
-        EventLoop *loop_; // 事件循环
+        EventLoop *loop_; // 标识本身所属的事件循环
         const int fd_;    // fd，Poller监听的对象
         int events_;      // 注册监听感兴趣的事件
         int revents_;     // Poller返回具体发生的事件

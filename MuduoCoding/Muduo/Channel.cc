@@ -31,13 +31,13 @@ namespace myMuduo
     void Channel::update()
     {
         // 调用 Poller 中的方法
-        // loop_->updateChannel(this);
+        loop_->updateChannel(this);
     }
 
     // 在Channel所属的EventLoop中删除，当前的Channel对象
     void Channel::remove()
     {
-        // loop_->removeChannel(this);
+        loop_->removeChannel(this);
     }
 
     //
