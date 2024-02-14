@@ -85,7 +85,6 @@ namespace myMuduo
 
         // 与 Channel 相关的
         ChannelList activeChannels_; // 存储就绪的 Channel
-        Channel *currentActiveChannel_;
 
         std::atomic_bool callingPendingFunctors_; // 标识当前 loop 是否有需要执行的回调操作
         std::vector<Functor> pendingFunctors_;    // 存储 loop 所需执行的所有回调操作
