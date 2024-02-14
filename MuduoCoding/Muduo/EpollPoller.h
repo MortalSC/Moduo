@@ -13,8 +13,8 @@ namespace myMuduo
 {
 
     class Channel;
-    namespace NetWork
-    {
+    // namespace NetWork
+    // {
         class EpollPoller : public Poller
         {
         public:
@@ -42,5 +42,5 @@ namespace myMuduo
             int epollfd_; // epoll_create 返回的句柄
             EventList events_;
         };
-    }
+    // }
 }

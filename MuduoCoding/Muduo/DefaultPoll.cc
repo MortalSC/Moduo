@@ -1,4 +1,5 @@
 #include "Poller.h"
+#include "EpollPoller.h"
 
 #include <stdlib.h>
 
@@ -10,8 +11,8 @@
 
 namespace myMuduo
 {
-    namespace NetWork
-    {
+    // namespace NetWork
+    // {
         Poller *Poller::newDefualtPoller(EventLoop *loop){
             // 默认的 IO复用的实例设定
             // 通过一个环境变量来选择
@@ -21,8 +22,8 @@ namespace myMuduo
                 return nullptr; // 生成 poll 的实例（模拟项目中仅实现：epoll）
             }else{
                 // 否则使用 epoll
-                return nullptr; // 生成 epoll 的实例
+                return new EpollPoller(loop); // 生成 epoll 的实例
             }
         }
-    }
+    // }
 }

@@ -16,8 +16,8 @@ namespace myMuduo
 {
     class Channel;
 
-    namespace NetWork
-    {
+    // namespace NetWork
+    // {
         class EventLoop;
         class Poller : noncopyable
         {
@@ -53,5 +53,5 @@ namespace myMuduo
         private:
             EventLoop *ownerLoop_;
         };
-    }
+    // }
 }

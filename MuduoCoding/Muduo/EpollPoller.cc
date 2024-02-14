@@ -9,8 +9,8 @@
 
 namespace myMuduo
 {
-    namespace NetWork
-    {
+    // namespace NetWork
+    // {
         // 标识 Channel 在 epoll 的状态
         const int kNew = -1;    // 新的
         const int kAdded = 1;   // 已经存在的
@@ -179,5 +179,5 @@ namespace myMuduo
                 // 【相等于epoll的就绪队列（双端队列）】
            }
         }
-    }
+    // }
 }
