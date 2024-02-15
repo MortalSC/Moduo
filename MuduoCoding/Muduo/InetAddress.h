@@ -31,6 +31,8 @@ namespace myMuduo
             return &addr_;
         }
 
+        // 外部设置 addr 内容
+        void setSockAddr(cosnt sockaddr_in& addr){addr_ = addr;}
     private:
         struct sockaddr_in addr_;
     };
