@@ -36,6 +36,11 @@
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/CurrentThread.o -c /home/Mortal/MuduoProject/Muduo/CurrentThread.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/CurrentThread.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/Mortal/MuduoProject/Muduo/Timestamp.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/Timestamp.cc"
 },

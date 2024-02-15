@@ -6,6 +6,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mymuduo.dir/InetAddress.o"
   "CMakeFiles/mymuduo.dir/Poller.o"
   "CMakeFiles/mymuduo.dir/Log.o"
+  "CMakeFiles/mymuduo.dir/CurrentThread.o"
   "CMakeFiles/mymuduo.dir/Timestamp.o"
   "CMakeFiles/mymuduo.dir/EpollPoller.o"
   "/home/Mortal/MuduoProject/Muduo/dir/libmymuduo.pdb"

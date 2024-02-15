@@ -213,9 +213,32 @@ CMakeFiles/mymuduo.dir/Log.o.provides: CMakeFiles/mymuduo.dir/Log.o.requires
 
 CMakeFiles/mymuduo.dir/Log.o.provides.build: CMakeFiles/mymuduo.dir/Log.o
 
+CMakeFiles/mymuduo.dir/CurrentThread.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/CurrentThread.o: /home/Mortal/MuduoProject/Muduo/CurrentThread.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/Mortal/MuduoProject/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/mymuduo.dir/CurrentThread.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/CurrentThread.o -c /home/Mortal/MuduoProject/Muduo/CurrentThread.cc
+
+CMakeFiles/mymuduo.dir/CurrentThread.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/CurrentThread.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/Mortal/MuduoProject/Muduo/CurrentThread.cc > CMakeFiles/mymuduo.dir/CurrentThread.i
+
+CMakeFiles/mymuduo.dir/CurrentThread.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/CurrentThread.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/Mortal/MuduoProject/Muduo/CurrentThread.cc -o CMakeFiles/mymuduo.dir/CurrentThread.s
+
+CMakeFiles/mymuduo.dir/CurrentThread.o.requires:
+.PHONY : CMakeFiles/mymuduo.dir/CurrentThread.o.requires
+
+CMakeFiles/mymuduo.dir/CurrentThread.o.provides: CMakeFiles/mymuduo.dir/CurrentThread.o.requires
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CurrentThread.o.provides.build
+.PHONY : CMakeFiles/mymuduo.dir/CurrentThread.o.provides
+
+CMakeFiles/mymuduo.dir/CurrentThread.o.provides.build: CMakeFiles/mymuduo.dir/CurrentThread.o
+
 CMakeFiles/mymuduo.dir/Timestamp.o: CMakeFiles/mymuduo.dir/flags.make
 CMakeFiles/mymuduo.dir/Timestamp.o: /home/Mortal/MuduoProject/Muduo/Timestamp.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/Mortal/MuduoProject/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/Mortal/MuduoProject/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/mymuduo.dir/Timestamp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/Mortal/MuduoProject/Muduo/Timestamp.cc
 
@@ -238,7 +261,7 @@ CMakeFiles/mymuduo.dir/Timestamp.o.provides.build: CMakeFiles/mymuduo.dir/Timest
 
 CMakeFiles/mymuduo.dir/EpollPoller.o: CMakeFiles/mymuduo.dir/flags.make
 CMakeFiles/mymuduo.dir/EpollPoller.o: /home/Mortal/MuduoProject/Muduo/EpollPoller.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/Mortal/MuduoProject/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/Mortal/MuduoProject/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/mymuduo.dir/EpollPoller.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/EpollPoller.o -c /home/Mortal/MuduoProject/Muduo/EpollPoller.cc
 
@@ -268,6 +291,7 @@ mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/InetAddress.o" \
 "CMakeFiles/mymuduo.dir/Poller.o" \
 "CMakeFiles/mymuduo.dir/Log.o" \
+"CMakeFiles/mymuduo.dir/CurrentThread.o" \
 "CMakeFiles/mymuduo.dir/Timestamp.o" \
 "CMakeFiles/mymuduo.dir/EpollPoller.o"
 
@@ -281,6 +305,7 @@ mymuduo_EXTERNAL_OBJECTS =
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/InetAddress.o
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/Poller.o
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/Log.o
+/home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/CurrentThread.o
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/Timestamp.o
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/EpollPoller.o
 /home/Mortal/MuduoProject/Muduo/dir/libmymuduo.so: CMakeFiles/mymuduo.dir/build.make
@@ -299,6 +324,7 @@ CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/TcpServer.o.requires
 CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/InetAddress.o.requires
 CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/Poller.o.requires
 CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/Log.o.requires
+CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/CurrentThread.o.requires
 CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/Timestamp.o.requires
 CMakeFiles/mymuduo.dir/requires: CMakeFiles/mymuduo.dir/EpollPoller.o.requires
 .PHONY : CMakeFiles/mymuduo.dir/requires
