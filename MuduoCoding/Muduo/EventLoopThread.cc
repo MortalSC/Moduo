@@ -46,7 +46,9 @@ namespace myMuduo
     {
         // 在线程中创建一个 EventLoop 对象
         EventLoop loop; // 设计核心：one loop per thread is usually a good model
-
+        // 注意：此处是栈上的对象，在Pool中使用容器存储的是它的地址，不需要对此进行手动释放
+        // 栈上的对象出了作用域就结束了
+        
         // 如果存在回调
         if (callback_)
         {

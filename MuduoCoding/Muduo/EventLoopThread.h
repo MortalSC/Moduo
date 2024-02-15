@@ -1,3 +1,4 @@
+#pragma once
 #include "noncopyable.h"
 #include "Thread.h"
 
