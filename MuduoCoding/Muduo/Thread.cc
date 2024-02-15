@@ -6,7 +6,9 @@
 namespace myMuduo
 {
     // 类的静态变量初始化
-    std::atomic_int Thread::numCreated_ = 0;
+    // std::atomic_int Thread::numCreated_ = 0;
+    std::atomic_int Thread::numCreated_(0);
+
     Thread::Thread(ThreadFunc func, const std::string &name)
         : started_(false),
           joined_(false),
