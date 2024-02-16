@@ -16,7 +16,7 @@ namespace myMuduo
          * SOCK_NONBLOCK：表明sockfd是非阻塞的
          * SOCK_CLOEXEC：表明从进程继承而来的fd在该进程中都设置为默认关闭
         */
-        int sockfd = ::socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, IPPROTO+TCP);
+        int sockfd = ::socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, IPPROTO_TCP);
         if(sockfd<0){
             Log_FATAL("%s:%s:%d listen socket create errno : %d \n", __FILE__, __FUNCTION__, __LINE__, errno);
         }
@@ -60,7 +60,7 @@ namespace myMuduo
     // listenfd有事件发生了，就是有新用户连接了【由baseLoop中Poller反馈而知】
     void Acceptor::headleRead(){
         // 获取客户端连接信息
-        InetAddress peerAddr;   
+        InetAddress peerAddr;
         // 获取连接的fd和填充客户端ip/port信息
         int connfd = acceptSocket_.accept(&peerAddr);
         if(connfd >= 0){
