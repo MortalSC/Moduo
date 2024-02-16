@@ -5,6 +5,7 @@
 #include <functional>
 #include <mutex>
 #include <condition_variable>
+#include <string>
 
 /**
  * EventLoopThread类：用于关联一个EventLoop和一个线程
@@ -18,7 +19,7 @@ namespace myMuduo
     public:
         using ThreadInitCallback = std::function<void(EventLoop *)>;
 
-        EventLoopThread(const ThreadInitCallback &cb = ThreadInitCallback(), const std::&name = std::string());
+        EventLoopThread(const ThreadInitCallback &cb = ThreadInitCallback(), const std::string &name = std::string());
         ~EventLoopThread();
 
         // 启动事件循环

@@ -2,7 +2,7 @@
 #include "EventLoop.h"
 namespace myMuduo
 {
-    EventLoopThread::EventLoopThread(const ThreadInitCallback &cb = ThreadInitCallback(), const std::&name = std::string())
+    EventLoopThread::EventLoopThread(const ThreadInitCallback &cb, const std::string &name)
         : loop_(nullptr), // 实际的 EventLoop 需要在threadFunc中创建
           exiting_(false),
           thread_(std::bind(&EventLoopThread::threadFunc, this), name), // 创建 Thread 对象（子线程需要调用start才进行创建）
@@ -25,7 +25,7 @@ namespace myMuduo
     EventLoop *EventLoopThread::startLoop()
     {
         // 启动线程 => 执行 func => EventLoopThread & threadFunc
-        thread_->start();
+        thread_.start();
 
         EventLoop *loop = nullptr;
 
