@@ -1,13 +1,38 @@
 [
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Acceptor.o -c /home/Mortal/MuduoProject/Muduo/Acceptor.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Acceptor.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/DefaultPoll.o -c /home/Mortal/MuduoProject/Muduo/DefaultPoll.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/DefaultPoll.cc"
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Thread.o -c /home/Mortal/MuduoProject/Muduo/Thread.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Thread.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpConnection.o -c /home/Mortal/MuduoProject/Muduo/TcpConnection.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/TcpConnection.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Buffer.o -c /home/Mortal/MuduoProject/Muduo/Buffer.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Buffer.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/Mortal/MuduoProject/Muduo/EventLoop.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/EventLoop.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoopThread.o -c /home/Mortal/MuduoProject/Muduo/EventLoopThread.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/EventLoopThread.cc"
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
@@ -41,8 +66,18 @@
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoopThreadPool.o -c /home/Mortal/MuduoProject/Muduo/EventLoopThreadPool.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/EventLoopThreadPool.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/Mortal/MuduoProject/Muduo/Timestamp.cc",
   "file": "/home/Mortal/MuduoProject/Muduo/Timestamp.cc"
+},
+{
+  "directory": "/home/Mortal/MuduoProject/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS  -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Socket.o -c /home/Mortal/MuduoProject/Muduo/Socket.cc",
+  "file": "/home/Mortal/MuduoProject/Muduo/Socket.cc"
 },
 {
   "directory": "/home/Mortal/MuduoProject/build",
