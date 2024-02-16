@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <strings.h>
+#include <netinet/tcp.h>
+
 
 namespace myMuduo
 {
@@ -66,13 +68,13 @@ namespace myMuduo
     //
     void Socket::setReuseAddr(bool on){
 int optval = on ? 1 : 0;
-        ::setsockopt(sockfd_, SQL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
+        ::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
     }
 
     //
     void Socket::setReusePort(bool on){
 int optval = on ? 1 : 0;
-        ::setsockopt(sockfd_, SQL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
+        ::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
     }
     // 设置保持连接
     void Socket::setKeepAlive(bool on){
