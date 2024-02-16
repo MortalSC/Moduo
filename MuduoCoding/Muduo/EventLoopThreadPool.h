@@ -22,7 +22,7 @@ namespace myMuduo
         void setThreadNum(int numThreads){numThreads_ = numThreads;}
 
         // 启动
-        void start(cosnt ThreadInitCallback& cb = ThreadInitCallback());
+        void start(const ThreadInitCallback& cb = ThreadInitCallback());
 
         // 如果在工作在多线程中
         // baseLoop以轮询的方式把Channel分配给subLoop

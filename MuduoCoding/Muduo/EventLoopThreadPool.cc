@@ -1,4 +1,5 @@
 #include "EventLoopThreadPool.h"
+#include "EventLoopThread.h"
 
 namespace myMuduo
 {
@@ -16,7 +17,7 @@ namespace myMuduo
     }
 
     // 启动
-    void EventLoopThreadPool::start(cosnt ThreadInitCallback &cb = ThreadInitCallback())
+    void EventLoopThreadPool::start(const ThreadInitCallback &cb )
     {
         started_ = true; // 设置启动状态
 
@@ -30,7 +31,7 @@ namespace myMuduo
             // 创建事件循环线程与线程对象
             EventLoopThread *t = new EventLoopThread(cb, buf);
             // 存入容器，并使用智能指针管理（不用手动释放资源）
-            threads_.push_back(std::unique_ptr<std::EventLoopThread>(t));
+            threads_.push_back(std::unique_ptr<EventLoopThread>(t));
             // 放入容器管理线程，并启动
             loops_.push_back(t->startLoop());
         }
@@ -51,7 +52,7 @@ namespace myMuduo
         // 如果创建了，才用轮询的方式，分配线程执行任务
         if(!loops_.empty()){
             // 使用顺序遍历容器中存在的线程与EventLoop去处理任务
-            loop = loops_[next];
+            loop = loops_[next_];
             ++next_;
             if(next_ >= loops_.size()) next_ = 0;
         }
