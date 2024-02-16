@@ -18,7 +18,7 @@ namespace myMuduo
 
         int fd() const { return sockfd_; }
         // 绑定本地 ip/port
-        void bindAddress(cosnt InetAddress& localaddr);
+        void bindAddress(const InetAddress& localaddr);
         // 启动监听
         void listen();
         // 绑定接收

@@ -15,7 +15,7 @@ namespace myMuduo
     }
 
     // 绑定本地 ip/port
-    void Socket::bindAddress(cosnt InetAddress &localaddr)
+    void Socket::bindAddress(const InetAddress &localaddr)
     {
         // 绑定
         if (0 != ::bind(sockfd_, (sockaddr *)localaddr.getSockAddr(), sizeof(sockaddr_in)))
@@ -38,7 +38,7 @@ namespace myMuduo
     {
         sockaddr_in addr;
         socklen_t len;
-        bzero(addr, sizeof(addr));
+        bzero(&addr, sizeof(addr));
         int connfd = ::accept(sockfd_, (sockaddr *)&addr, &len);
         if (connfd >= 0)
         {
