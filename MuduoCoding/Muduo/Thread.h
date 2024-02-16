@@ -24,7 +24,7 @@ namespace myMuduo
     public:
         using ThreadFunc = std::function<void()>;
 
-        explicit Thread(ThreadFunc func, const std::string &name = string());
+        explicit Thread(ThreadFunc func, const std::string &name = std::string());
         ~Thread();
         // 线程启动
         void start();

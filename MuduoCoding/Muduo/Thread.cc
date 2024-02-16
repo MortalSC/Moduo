@@ -12,7 +12,7 @@ namespace myMuduo
     Thread::Thread(ThreadFunc func, const std::string &name)
         : started_(false),
           joined_(false),
-          tid(0),
+          tid_(0),
           func_(std::move(func)),
           funcName_(name)
     {
@@ -64,7 +64,7 @@ namespace myMuduo
         if(funcName_.empty()){
             char buf[32] = {0};
             // 设置线程名字
-            snprintf(buf, sizoe(buf), "Thread %d" ,num);
+            snprintf(buf, sizeof(buf), "Thread %d" ,num);
             funcName_ = buf;
         }
     }
