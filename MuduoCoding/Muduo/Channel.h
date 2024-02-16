@@ -32,7 +32,7 @@ namespace myMuduo
         // 设置回调函数对象
         // 使用 move 避免拷贝，将左值转成右值引用
         void setReadOnlyCallback(ReadOnlyEventCallback cb) { readOnlyCallback_ = std::move(cb); }
-        void setReadCallback(EventCallback cb) { writeCallback_ = std::move(cb); }
+        void setWriteCallback(EventCallback cb) { writeCallback_ = std::move(cb); }
         void setCloseCallback(EventCallback cb) { closeCallback_ = std::move(cb); }
         void setErrorCallback(EventCallback cb) { errorCallback_ = std::move(cb); }
 
