@@ -17,7 +17,7 @@ namespace myMuduo{
     /* 关联 对端信息的回调函数 获取 */
     using ConnectionCallback = std::function<void (const TcpConnectionPtr&)>;
     /* 关闭 */
-    using closeCallback = std::function<void (const TcpConnectionPtr&)>;
+    using CloseCallback = std::function<void (const TcpConnectionPtr&)>;
     /**/
     using WriteComleteCallback = std::function<void (const TcpConnectionPtr&)>;
     /**/
