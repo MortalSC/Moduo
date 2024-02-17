@@ -22,4 +22,6 @@ namespace myMuduo{
     using WriteComleteCallback = std::function<void (const TcpConnectionPtr&)>;
     /**/
     using MessageCallback = std::function<void (const TcpConnectionPtr&, Buffer*,Timestamp)>;
+    /* 水位回调 */
+    using HighWaterMarkCallback = std::function<void (const TcpConnectionPtr&, size_t)>;
 }
