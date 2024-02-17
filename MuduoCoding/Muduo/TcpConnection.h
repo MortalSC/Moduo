@@ -75,11 +75,14 @@ namespace myMuduo
         // 连接销毁
         void connectDistroyed();
 
+
     private:
         void headleRead(Timestamp receiveTime);
         void headleWrite();
         void headleClose();
         void headleError();
+
+        void send(const std::string& buf);
 
         void sendInLoop(const void *message, size_t len);
         void shutdownInLoop();
@@ -89,11 +92,13 @@ namespace myMuduo
         const std::string name_;
         enum StateE
         {                   // 表示连接状态
-            kDisconnection, // 断开
+            kDisconnected, // 断开
             kConnecting,    // 正在连接
             kConnected,     // 已连接
             kDisconnecting  // 正在断开
         };
+        void setState(StateE state){state_ = state;}
+
         std::atomic_int state_; // 状态标识
         bool reading_;
 
@@ -111,7 +116,7 @@ namespace myMuduo
 
         size_t highWaterMark_; // 水位值
 
-        Buffer inputBuffer_;
-        Buffer outputBuffer_;
+        Buffer inputBuffer_;    // 接收缓冲区
+        Buffer outputBuffer_;   // 发送缓冲区
     };
 }
