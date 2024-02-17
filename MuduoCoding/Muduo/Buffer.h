@@ -96,6 +96,20 @@ namespace myMuduo
             }
         }
 
+        // 数据增加
+        void append(const char *data, size_t len)
+        {
+            // 检测空间 / 保证有足够空间
+            ensureWritableBytes(len);
+            // 数据拷贝
+            std::copy(data, data + len, beginWrite());
+            // 更新可写起点位置
+            writerIndex_ += len;
+        }
+
+        // 从 fd 上读取数据
+        ssize_t readFd(int fd, int* saveErrno);
+
     private:
         // 获取 vector 底层起始地址
         // buffer_.begin()：迭代器（指针）
@@ -104,6 +118,11 @@ namespace myMuduo
         char *begin() { return &*buffer_.begin(); }
         // 应对常对象
         const char *begin() const { return &*buffer_.begin(); }
+
+        // 获取可写起始位置
+        char *beginWrite() { return begin() + writerIndex_; }
+
+        const char *beginWrite() const { return begin() + writerIndex_; }
 
         // 扩容函数
         void makeSpace(size_t len)
