@@ -83,10 +83,21 @@ CMakeFiles/mymuduo.dir/Socket.o
  /home/Mortal/MuduoProject/Muduo/Timestamp.h
  /home/Mortal/MuduoProject/Muduo/noncopyable.h
 CMakeFiles/mymuduo.dir/TcpConnection.o
+ /home/Mortal/MuduoProject/Muduo/Buffer.h
+ /home/Mortal/MuduoProject/Muduo/Callbacks.h
+ /home/Mortal/MuduoProject/Muduo/Channel.h
+ /home/Mortal/MuduoProject/Muduo/CurrentThread.h
+ /home/Mortal/MuduoProject/Muduo/EventLoop.h
+ /home/Mortal/MuduoProject/Muduo/InetAddress.h
+ /home/Mortal/MuduoProject/Muduo/Log.h
+ /home/Mortal/MuduoProject/Muduo/Socket.h
  /home/Mortal/MuduoProject/Muduo/TcpConnection.cc
  /home/Mortal/MuduoProject/Muduo/TcpConnection.h
+ /home/Mortal/MuduoProject/Muduo/Timestamp.h
+ /home/Mortal/MuduoProject/Muduo/noncopyable.h
 CMakeFiles/mymuduo.dir/TcpServer.o
  /home/Mortal/MuduoProject/Muduo/Acceptor.h
+ /home/Mortal/MuduoProject/Muduo/Buffer.h
  /home/Mortal/MuduoProject/Muduo/Callbacks.h
  /home/Mortal/MuduoProject/Muduo/Channel.h
  /home/Mortal/MuduoProject/Muduo/CurrentThread.h
@@ -95,6 +106,7 @@ CMakeFiles/mymuduo.dir/TcpServer.o
  /home/Mortal/MuduoProject/Muduo/InetAddress.h
  /home/Mortal/MuduoProject/Muduo/Log.h
  /home/Mortal/MuduoProject/Muduo/Socket.h
+ /home/Mortal/MuduoProject/Muduo/TcpConnection.h
  /home/Mortal/MuduoProject/Muduo/TcpServer.cc
  /home/Mortal/MuduoProject/Muduo/TcpServer.h
  /home/Mortal/MuduoProject/Muduo/Timestamp.h

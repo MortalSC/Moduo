@@ -82,10 +82,21 @@ CMakeFiles/mymuduo.dir/Socket.o: /home/Mortal/MuduoProject/Muduo/Socket.h
 CMakeFiles/mymuduo.dir/Socket.o: /home/Mortal/MuduoProject/Muduo/Timestamp.h
 CMakeFiles/mymuduo.dir/Socket.o: /home/Mortal/MuduoProject/Muduo/noncopyable.h
 
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Buffer.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Callbacks.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Channel.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/CurrentThread.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/EventLoop.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/InetAddress.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Log.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Socket.h
 CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/TcpConnection.cc
 CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/TcpConnection.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/Timestamp.h
+CMakeFiles/mymuduo.dir/TcpConnection.o: /home/Mortal/MuduoProject/Muduo/noncopyable.h
 
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Acceptor.h
+CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Buffer.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Callbacks.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Channel.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/CurrentThread.h
@@ -94,6 +105,7 @@ CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/EventLoopThr
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/InetAddress.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Log.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Socket.h
+CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/TcpConnection.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/TcpServer.cc
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/TcpServer.h
 CMakeFiles/mymuduo.dir/TcpServer.o: /home/Mortal/MuduoProject/Muduo/Timestamp.h

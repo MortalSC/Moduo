@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/Mortal/MuduoProject/Muduo/Acceptor.cc
-Acceptor.h
-/home/Mortal/MuduoProject/Muduo/Acceptor.h
-Log.h
-/home/Mortal/MuduoProject/Muduo/Log.h
-InetAddress.h
-/home/Mortal/MuduoProject/Muduo/InetAddress.h
-sys/types.h
--
-sys/socket.h
--
-errno.h
--
-unistd.h
--
-
 /home/Mortal/MuduoProject/Muduo/Acceptor.h
 noncopyable.h
 /home/Mortal/MuduoProject/Muduo/noncopyable.h
@@ -30,6 +14,14 @@ Socket.h
 Channel.h
 /home/Mortal/MuduoProject/Muduo/Channel.h
 functional
+-
+
+/home/Mortal/MuduoProject/Muduo/Buffer.h
+vector
+-
+string
+-
+algorithm
 -
 
 /home/Mortal/MuduoProject/Muduo/Callbacks.h
@@ -84,14 +76,6 @@ vector
 memory
 -
 
-/home/Mortal/MuduoProject/Muduo/InetAddress.cc
-InetAddress.h
-/home/Mortal/MuduoProject/Muduo/InetAddress.h
-strings.h
--
-string.h
--
-
 /home/Mortal/MuduoProject/Muduo/InetAddress.h
 netinet/in.h
 -
@@ -108,34 +92,38 @@ noncopyable.h
 Timestamp.h
 /home/Mortal/MuduoProject/Muduo/Timestamp.h
 
-/home/Mortal/MuduoProject/Muduo/Socket.cc
-Socket.h
-/home/Mortal/MuduoProject/Muduo/Socket.h
-Log.h
-/home/Mortal/MuduoProject/Muduo/Log.h
-InetAddress.h
-/home/Mortal/MuduoProject/Muduo/InetAddress.h
-unistd.h
--
-sys/types.h
--
-sys/socket.h
--
-strings.h
--
-netinet/tcp.h
--
-
 /home/Mortal/MuduoProject/Muduo/Socket.h
 noncopyable.h
 /home/Mortal/MuduoProject/Muduo/noncopyable.h
+
+/home/Mortal/MuduoProject/Muduo/TcpConnection.h
+noncopyable.h
+/home/Mortal/MuduoProject/Muduo/noncopyable.h
+InetAddress.h
+/home/Mortal/MuduoProject/Muduo/InetAddress.h
+Callbacks.h
+/home/Mortal/MuduoProject/Muduo/Callbacks.h
+Buffer.h
+/home/Mortal/MuduoProject/Muduo/Buffer.h
+Timestamp.h
+/home/Mortal/MuduoProject/Muduo/Timestamp.h
+memory
+-
+string
+-
+atomic
+-
 
 /home/Mortal/MuduoProject/Muduo/TcpServer.cc
 TcpServer.h
 /home/Mortal/MuduoProject/Muduo/TcpServer.h
 Log.h
 /home/Mortal/MuduoProject/Muduo/Log.h
+TcpConnection.h
+/home/Mortal/MuduoProject/Muduo/TcpConnection.h
 functional
+-
+strings.h
 -
 
 /home/Mortal/MuduoProject/Muduo/TcpServer.h
