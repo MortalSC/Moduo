@@ -41,7 +41,9 @@ namespace myMuduo
         bool connected() const { return state_ == kConnected; }
 
         // 发送数据
-        void send(const void *message, int len);
+        // void send(const void *message, int len);
+        void send(const std::string& buf);
+        
         // 断开连接
         void shutdown();
 
@@ -82,7 +84,6 @@ namespace myMuduo
         void headleClose();
         void headleError();
 
-        void send(const std::string& buf);
 
         void sendInLoop(const void *message, size_t len);
         void shutdownInLoop();

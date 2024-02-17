@@ -144,9 +144,9 @@ namespace myMuduo
     }
 
     // 发送数据
-    void TcpConnection::send(const void *message, int len)
-    {
-    }
+    // void TcpConnection::send(const void *message, int len)
+    // {
+    // }
     void TcpConnection::send(const std::string &buf)
     {
         // 连接状态判断
@@ -235,7 +235,7 @@ namespace myMuduo
                 loop_->queueInLoop(
                     std::bind(highWaterMarkCallback_,
                               shared_from_this(),
-                              oldLen-remaining));
+                              oldLen - remaining));
             }
             // 剩余数据写回发送缓冲区
             outputBuffer_.append((char *)data + nwrote, remaining);
@@ -248,11 +248,68 @@ namespace myMuduo
     }
 
     // 断开连接
+    // 可能存在发送缓冲区数据没有发送完
+    // 因此状态设置为：kDisconnecting
     void TcpConnection::shutdown()
     {
+        if (state_ == kConnected)
+        {
+            setState(kDisconnecting);
+            loop_->runInLoop(
+                std::bind(&TcpConnection::shutdownInLoop, this));
+        }
     }
 
-    void TcpConnection::shutdownInLoop(){
+    void TcpConnection::shutdownInLoop()
+    {
+        if (!channel_->isWriting())
+        {
+            // 如果channel没有写事件，说明outputBuffer发送缓冲区中没有数据/发送完了
+            socket_->shutdownWrite(); // 关闭写端
+        }
+    }
 
+    // 连接建立：就在创建连接时调用
+    // TcpConnection 是涉及到实际用户关联状态的
+    // 也就是说用户操作是可以中断/终止连接的
+    // 而Channel/Loop等是用户不可操作的无影响
+    // 为了执行中的同步响应是需要保证 TcpConnection 的存活状态的
+    // 也就是执行方法是，前提是连接存在
+    void TcpConnection::connectEstablished()
+    {
+        // 设置连接状态
+        setState(kConnected);
+        /**
+         * 此处调用了Channel的tie方法
+         *  => 一个 TcpConnection 新连接创建的时候
+         *  => 就会关联到 Channel
+         *  => Channel.tie() 方法接收的是：强智能指针
+         *  => Channel.tie_ 成员使弱智能指针管理
+         *  => 从而实现了 Channel 与上层 TcpConnection 的关联
+         *  => 绑定一套执行方法
+         *  => 如果Channel相应的subLoop执行到
+         *  => 需要确保TcpConnection也存在（连接存在）
+         *  => 此时回调执行中，如果弱智能指针能够成功转成强智能指针
+         *  => 则说明TcpConnection存在（连接存在），反之不存在，会导致未知问题
+         */
+        channel_->tie(shared_from_this());
+        channel_->enableReading(); // 向Poll注册Channel的epollin事件
+
+        // 新连接建立
+        // 执行回调
+        connectionCallback_(shared_from_this());
+    }
+    // 销毁连接：连接关闭时调用
+    void TcpConnection::connectDistroyed()
+    {
+        if (state_ == kConnected)
+        {
+            // 修改状态
+            setState(kDisconnected);
+            // 关闭Channel所有的关注事件，从poller[epoll]中删除
+            channel_->disableAll();
+            connectionCallback_(shared_from_this());
+        }
+        channel_->remove(); // 把Channel从Poller中删除
     }
 }
