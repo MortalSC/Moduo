@@ -2,6 +2,7 @@
 
 #include <errno.h>
 #include <sys/uio.h>
+#include <unistd.h>
 namespace myMuduo
 {
     // 从 fd 上读取数据
@@ -49,4 +50,12 @@ namespace myMuduo
         return n;
     }
 
+    ssize_t Buffer::writeFd(int fd, int *saveErrno)
+    {
+        ssize_t n = ::write(fd, peek(), readableBytes());
+        if(n < 0){
+            *saveErrno = errno;
+        }
+        return n;
+    }
 }
