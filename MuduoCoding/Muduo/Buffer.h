@@ -109,7 +109,8 @@ namespace myMuduo
 
         // 从 fd 上读取数据
         ssize_t readFd(int fd, int* saveErrno);
-
+        // 通过 fd 发送数据
+        ssize_t writeFd(int fd, int* saveErrno);
     private:
         // 获取 vector 底层起始地址
         // buffer_.begin()：迭代器（指针）
