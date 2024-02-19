@@ -5,18 +5,18 @@
 
 namespace myMuduo
 {
-    // ¹¹Ôìº¯Êı£¨Ä¬ÈÏ + º¬²Î£©
+    // ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ + ï¿½ï¿½ï¿½Î£ï¿½
     Timestamp::Timestamp() : micSeconds_(0) {}
     Timestamp::Timestamp(int64_t ms)
         : micSeconds_(ms)
     {
     }
-    // »ñÈ¡µ±Ç°Ê±¼ä
+    // ï¿½ï¿½È¡ï¿½ï¿½Ç°Ê±ï¿½ï¿½
     Timestamp Timestamp::now()
     {
         return Timestamp(time(NULL));
     }
-    // ¸ñÊ½»¯Ê±¼äÊä³ö
+    // ï¿½ï¿½Ê½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
     std::string Timestamp::toTimeString() const
     {
         char buf[128] = {0};
@@ -28,6 +28,7 @@ namespace myMuduo
                  tm_time->tm_hour,
                  tm_time->tm_min,
                  tm_time->tm_sec);
+        return buf;
     }
 
 };
