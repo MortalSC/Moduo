@@ -39,9 +39,10 @@ namespace myMuduo
     int Socket::accept(InetAddress *peeraddr)
     {
         sockaddr_in addr;
-        socklen_t len;
+        socklen_t len = sizeof(addr);   // 必须初始化
         bzero(&addr, sizeof(addr));
-        int connfd = ::accept(sockfd_, (sockaddr *)&addr, &len);
+        // 设置文件描述符为非阻塞：SOCK_CLOEXEC | SOCK_NONBLOCK
+        int connfd = ::accept4(sockfd_, (sockaddr *)&addr, &len, SOCK_CLOEXEC | SOCK_NONBLOCK);
         if (connfd >= 0)
         {
             peeraddr->setSockAddr(addr);
