@@ -26,7 +26,8 @@ namespace myMuduo
           threadPool_(new EventLoopThreadPool(loop, name)),                // 创建线程池对象，默认只有主线程
           connectionCallback_(),
           messageCallback_(),
-          nextConnId_(1)
+          nextConnId_(1),
+          started_(0)
     {
         // 当有新用户连接时，会执行 TcpServer::newConnection 新连接回调
         // 在代码上就是在 Acceptor::headleRead() 中去执行
