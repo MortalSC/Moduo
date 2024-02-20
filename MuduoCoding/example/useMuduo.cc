@@ -68,21 +68,15 @@ private:
 
 int main()
 {
-    std::cout << "1" << std::endl;
-        std::cout << "测试此处错误！" << std::endl;
 
     EventLoop loop;
-    std::cout << "2" << std::endl;
 
     // 绑定 ip/端口【ip默认为本地环回】
     InetAddress addr(8000);
-    std::cout << "3" << std::endl;
 
     Server server(&loop, addr, "测试使用本项目Muduo库"); // 启动Acceptor（创建了一个nonblocking fd）创建绑定
-    std::cout << "4" << std::endl;
 
     server.start(); // 启用监听
-    std::cout << "5" << std::endl;
 
     loop.loop(); // 启动mainLoop，就是底层的Poller[epoll]
 
